@@ -1,0 +1,109 @@
+<!--miniprogram/pages/ucenter/userInfo/index.wxml-->
+<commonGlobal></commonGlobal>
+<view class="my_user_info">
+<!-- 表单 -->
+  <form catchsubmit="formSubmit">
+    <view class="user_info_form">
+      <view class="user_info_form_item">
+        <text class="form_lable">头像</text>
+        <view class="right_item" wx:if="{{!seeDetail}}" bindtap="handleUpImg">
+          <view class="userImg">
+            <image class="user_photo" src="{{avatar?avatar:'data:image/svg+xml,'+my_header_avater}}"></image>
+          </view>
+          <view class="right_icon">
+            <image src="/packageOne/images/userCenterIcon/extra.svg"></image>
+          </view>
+        </view>
+        <view class="right_item" wx:if="{{seeDetail}}">
+          <view class="userImg">
+            <image class="user_photo" src="{{avatar?avatar:'data:image/svg+xml,'+my_header_avater}}"></image>
+          </view>
+        </view>
+      </view>
+      <view class="user_info_form_item" style="padding: {{!seeDetail&&'20rpx'||'36rpx'}} 0;">
+        <view class="form_lable">
+            <view>昵称</view>
+            <view class="show-title-tips" wx:if="{{!seeDetail}}">建议不超过5个中文</view>
+        </view>
+        <view class="right_item" wx:if="{{!seeDetail}}">
+          <input value="{{userInfo.nickname}}" focus="{{isfocus?true:false}}" bindinput="changeValue" maxlength="{{ValueMaxlength}}" name="nickname" class="right_text" placeholder-style='text-align:right;color:#A6A6A6' placeholder="未填写"/>
+          <view class="right_icon" bindtap="hanldefocus" data-type='isfocus'>
+            <image src="/packageOne/images/userCenterIcon/extra.svg"></image>
+          </view>
+        </view>
+        <view class="right_data" wx:if="{{seeDetail}}">
+          <text>{{userInfo.nickname}}</text>
+        </view>
+      </view>
+      <view  class="user_info_form_item">
+        <text class="form_lable">性别</text>
+        <view class="right_data">
+          <text>{{genderData[userInfo.gender]}}</text>
+        </view>
+      </view>
+      <view  class="user_info_form_item">
+        <text class="form_lable">手机号</text>
+        <view class="right_data">
+          <text>{{userInfo.mobile}}</text>
+        </view>
+      </view>
+      <view  class="user_info_form_item">
+        <text class="form_lable">生日</text>
+        <view class="right_data">
+          <text>{{userInfo.birthday}}</text>
+        </view>
+      </view>
+      <view  class="user_info_form_item">
+        <text class="form_lable">星座</text>
+        <view class="right_data">
+          <text>{{userInfo.constellation?userInfo.constellation:''}}</text>
+        </view>
+      </view>
+      <!-- 所在地 -->
+      <view class="user_info_form_item">
+        <text class="form_lable">所在地</text>
+        <picker wx:if="{{!seeDetail}}" mode='multiSelector' value="{{addressIndex}}" range="{{addressArray}}" bindchange="bindAddressPickerChange" bindcolumnchange='bindMutiAddressPickerChange'>
+            <view style="display: flex;">
+                <view class="right_data" wx:if="{{region.length}}">
+                    {{region[0]}}，{{region[1]}}
+                </view>
+                <view class="address_icon" bindtap="hanldefocus"  data-type='isfocus1'>
+                    <image src="/packageOne/images/userCenterIcon/extra.svg"></image>
+                </view>
+            </view>
+        </picker>
+        <view wx:if="{{seeDetail}}" class="right_data">
+          <text>{{region}}</text>
+        </view>
+      </view>
+      <view  class="user_info_form_item" wx:if="{{seeDetail}}">
+        <text class="form_lable">账号信息</text>
+        <view class="right_data">
+          <text>{{userInfo.userName||userInfo.cnCardNo}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 条款管理 与隐私政策 -->
+    <view class="terms_andagreements" wx:if="{{seeDetail}}">
+   <view class="terms_and_privacyPolicy" data-value='1' bindtap="termsAndagreements">
+    <text>条款管理</text>
+    <image src="/packageOne/images/userCenterIcon/extra.svg"></image>
+   </view>
+   <view class="terms_and_privacyPolicy" data-value='2'  bindtap="termsAndagreements">
+    <text>《隐私政策》</text>
+    <image src="/packageOne/images/userCenterIcon/extra.svg"></image>
+   </view>
+
+    </view>
+  <!--  -->
+    <!-- 底部按钮 -->
+    <view class="bootom_but"  wx:if="{{!seeDetail}}">
+      <button class="cancel_but" width='328' type="default" bindtap="handleBack"> <text class="butText">取消</text></button>
+      <button formType="submit" class="confirm_but" type="default" style="background-color: {{themeColor}};"> <text class="butText">保存</text></button>
+    </view>
+    <view class="bootom_but outLogin" wx:if="{{seeDetail}}">
+      <button class="confirm_but" type="default" bindtap="handleLogOut" style="background-color: {{themeColor}};width:100%;margin-left: 0;"> <text class="butText">退出登录</text></button>
+    </view>
+  </form>
+</view>

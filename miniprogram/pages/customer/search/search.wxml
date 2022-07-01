@@ -1,0 +1,42 @@
+<view class="search">
+  <view class="search_header">
+    <view class="search_header_item">
+      <view class="search_icon" >
+        <i class="weui-icon-search" bindtap="goSearchResult"></i></view>
+      <input type="text" class="search_inpt" placeholder="大家都在搜“面膜”" placeholder-class="search_ph" />
+    </view>
+  </view>
+  <view class="search_content">
+
+    <view class="search_citem1">
+
+      <view class="search_item_box1">
+        <view class="search_leftLine">
+
+        </view>
+        <text class="search_text1">历史记录</text>
+        <view class="search_cright">
+          <text class="search_text2">x</text>
+          <text class="search_text3">清空</text>
+        </view>
+      </view>
+      <view class="search_item_box">
+        <text class="search_item_box_text" wx:for="{{historyData}}" wx:key="index">{{item.name}}</text>
+      </view>
+    </view>
+
+    <view class="search_citem2">
+
+      <view class="search_item_box1">
+        <view class="search_leftLine">
+
+        </view>
+        <text class="search_text1">热门推荐</text>
+      
+      </view>
+      <view class="search_item_box">
+        <text class="search_item_box_text" wx:for="{{hotData}}" wx:key="index">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

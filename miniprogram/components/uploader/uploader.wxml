@@ -1,0 +1,15 @@
+<!--components/uploader/uploader.wxml-->
+<view class="weui-uploader">
+  <view class="img-v weui-uploader__bd">
+    <view class='pic' wx:for="{{imgs}}" wx:for-item="item" wx:key="index">
+        <image class='weui-uploader__img '
+                src="{{item}}"
+                data-index="{{index}}" mode="aspectFill" bindtap="previewImg">
+                  <!-- <icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon> -->
+                  <image catchtap="deleteImg" class="delete-btn" data-index="{{index}}" src="{{imageUrl+'/icons/bg_close.svg'}}"></image>
+        </image>
+    </view>
+      <!-- 用来提示用户上传图片 -->
+      <view wx:if="{{imgs.length<9}}" class="weui-uploader__input-box pic" bindtap="chooseImg"> </view>
+  </view>
+</view>

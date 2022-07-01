@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "rate":"../../../components/rate/rate"
+  },
+  "navigationBarTitleText": "订单评价",
+  "enablePullDownRefresh":false
+}

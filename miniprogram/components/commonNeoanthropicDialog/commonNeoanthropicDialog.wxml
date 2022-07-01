@@ -1,0 +1,46 @@
+<!--components/common_noticeNoticeDialog/common_noticeNoticeDialog.wxml-->
+<view class="common_notice_mask_bg" catchtouchmove='{{true}}'>
+  <view class="common_notice_mask">
+    <view class="common_notice_mask_content_box_bg">
+      <image class="bgImage" src="{{'data:image/svg+xml,'+Union}}"></image>
+      <view class="common_notice_mask_content_box">
+        <view class="titleName">{{userInfo.nickname}}</view>
+        <view style=" border: 10rpx solid {{themeColor}};" class="userImage">
+          <image src="{{ userInfo.avatar?userInfo.avatar:'data:image/svg+xml,'+my_header_avater}}"></image>
+          <!-- <image style="{{userInfo.avatar ? '' : 'left:0;top:0'}}" src="https://thirdwx.qlogo.cn/mmopen/vi_32/qRVUeqYiaalLEAvCeY7yRYWTewhzyhZrdqEJoicj8icwibDxoCdeiaVgicgHhjkYNgPnu9PqSaQfvSAwz6ib5oTyLEdDA/132"></image> -->
+     
+        </view>
+        <view class="iconBox">
+          <view class="customer_icon">
+            <image class="icon_left" src="data:image/svg+xml,{{zuo}}"></image>
+                     <!-- <image class="icon_left" src="/images/icons/huangguan.svg"></image> -->
+            <view class="icon_right">
+              <image class="customer_right_bg" src="data:image/svg+xml,{{you}}"></image>
+              <view wx:if="{{userInfo.type==1 }}" class="icon_right_text">注册顾客</view>
+              <view wx:if="{{ userInfo.type!=1 && userInfo.level!=3}}" class="icon_right_text">零售顾客</view>
+              <view wx:if="{{userInfo.type!=1 && userInfo.level==3}}" class="icon_right_text">星级顾客</view>
+              <!-- <view class="icon_right_text">{{userInfo.levelName}}</view> -->
+            </view>
+          </view>
+        </view>
+        <view class="infoBox">
+        <view class="count">en家可用点数：{{selfEnData.availableTotalVirtualCoin || 0 }}</view>
+        <view class="CNumber">{{userInfo.cnCardNo || '暂无CN号'}}</view>
+
+        </view>
+        <view bindtap="openSharePosters" style="background-color: {{themeColor}};" class="footerBut">
+          开启如新NU店之旅
+        </view>
+
+        <!-- <view class="common_notice_mask_con_logo">
+          <image style="width: 100%;height: 100%;" src="../../images/icons/level_1.png"></image>
+        </view>
+        <view class="common_notice_mask_con_text">恭喜您的如新NU店
+          等级已提升至 <text>v1</text></view>
+          <view class="skinPeeler">店铺换肤功能</view>
+          <view class="award">NU币奖励：100个</view>
+        <view bindtap="openSharePosters" style="background-color: {{themeColor}};" class="common_notice_mask_btn">领取奖励</view> -->
+      </view>
+    </view>
+  </view>
+</view>

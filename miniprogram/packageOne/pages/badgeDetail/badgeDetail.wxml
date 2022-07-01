@@ -1,0 +1,9 @@
+<!--pages/ucenter/badgeDetail/badgeDetail.wxml-->
+<view class="badgeDetail">
+  <view class="badgeDetail_top">
+    <view class="badgeDetail_top_logo">
+      <image src="{{badgeDetailData.imageAchieve}}"></image>
+    </view>
+    <view class="badgeDetail_top_main_text">{{(badgeDetailData.badgeGradeName?badgeDetailData.badgeGradeName:badgeDetailData.name)||''}}</view>
+  </view>
+</view>

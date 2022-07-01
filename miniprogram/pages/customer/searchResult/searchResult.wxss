@@ -1,0 +1,57 @@
+page {
+  background-color: #fafafa;
+}
+.searchResult{
+  overflow: hidden;
+  margin-bottom: 44rpx;
+}
+
+.search_header {
+  height: 120rpx;
+  width: 100%;
+  background: white;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30rpx;
+
+}
+
+.search_header_item {
+  width: calc(100% - 48rpx);
+  height: 72rpx;
+
+  box-sizing: border-box;
+  margin: 24rpx auto 0;
+  position: relative;
+}
+
+.search_inpt {
+  width: 100%;
+  background-color: #F1F1F1;
+  border-radius: 8rpx;
+  height: 72rpx;
+  background-color: #F1F1F1;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+  margin: 24rpx auto 0;
+  padding-left: 82rpx;
+}
+
+.weui-icon-search {
+  width: 48rpx;
+  height: 48rpx;
+  position: absolute;
+  z-index: 10;
+  top: 12rpx;
+  left: 24rpx;
+}
+
+.search_ph {
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24rpx;
+
+
+  color: #A6A6A6;
+}

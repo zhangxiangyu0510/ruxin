@@ -1,0 +1,143 @@
+/* pages/evaluate/evaluate.wxss */
+.evaluateContent{
+    padding: 0 32rpx;
+    background-color: #fafafa;
+}
+.evaluateContent .evaluateInfo{
+    box-sizing: border-box;
+    width: 100%;
+    height: 252rpx;
+    padding-top: 48rpx;
+    text-align: center;
+}
+.evaluateContent .evaluateInfo .infoOrder{
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 56rpx;
+    text-align: center;
+    color: #404040;
+    mix-blend-mode: normal;
+    margin-bottom: 16rpx;
+}
+.evaluateContent .evaluateInfo .time{
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 34rpx;
+    color: #7F7F7F;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+    margin-bottom: 16rpx;
+}
+.evaluateContent .evaluateInfo .tipsTitle{
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 34rpx;
+    text-align: center;
+    color: #7F7F7F;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+}
+.evaluateContent .evaluate{
+    box-sizing: border-box;
+    width: 686rpx;
+    /* height: 390rpx; */
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 63rpx;
+    padding: 32rpx;
+    padding-right: 0;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #000000;
+}
+.evaluateContent .evaluate .ECommon{
+    display: flex;
+    margin-bottom: 48rpx;
+    margin-right: 16rpx;
+    line-height: 48rpx;
+}
+.evaluateContent .evaluate .logistics{
+    display: flex;
+    line-height: 48rpx;
+}
+.evaluateContent .evaluate .comprehensive{
+    display: flex;
+}
+.evaluateContent .evaluate .comprehensive .comprehensiveIcon{
+    display: flex;
+}
+.evaluateContent .evaluate .comprehensive .comprehensiveIcon view{
+    display: flex;
+    margin-right: 48rpx;
+}
+.evaluateContent .evaluate .comprehensive .comprehensiveIcon view .icon{
+    width: 48rpx;
+    height: 48rpx;
+    /* background-color: #7340B3; */
+    border-radius: 50%;
+    margin-right: 8rpx;
+}
+.evaluateContent .commentsSuggestions{
+    width: 686rpx;
+    min-height: 440rpx;
+    margin-bottom: 74rpx;
+}
+.evaluateContent .commentsSuggestions .CSTitle{
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 56rpx;
+    color: #404040;
+    padding-bottom: 32rpx;
+}
+.evaluateContent .commentsSuggestions .CSTextarea{
+    position: relative;
+    box-sizing: border-box;
+    width: 686rpx;
+    min-height: 440rpx;
+    background-color: #FFFFFF;
+    border-radius: 16rpx;
+    padding: 32rpx;
+}
+.textareaLength{
+    position: absolute;
+    bottom: -10rpx;
+    right: 0;
+}
+.evaluateContent .commentsSuggestions .CSTextarea .CSTextareaPlaceHolder{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 40px;
+    color: #A6A6A6;
+    mix-blend-mode: normal;
+}
+.evaluateContent .commentsSuggestions .CSTextarea textarea{
+    width: 100%;
+    min-height: 376rpx;
+}
+.evaluateContent .onSubmit{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #FFFFFF;
+    padding: 24rpx;
+}
+.evaluateContent .onSubmit view{
+    width: 136rpx;
+    height: 56rpx;
+    font-size: 12px;
+    background-color: #7340B3;
+    padding: 0;
+    line-height: 56rpx;
+    text-align: center;
+    border-radius: 8rpx;
+    color: #FFFFFF;
+}

@@ -1,0 +1,202 @@
+/* pages/feedbackComplaints/feedbackComplaints.wxss */
+.feedbackComplaints{
+    padding: 32rpx 32rpx 0;
+    background-color: #fafafa;
+    /* padding-top: 176rpx; */
+    font-family: PingFang SC;
+    font-style: normal;
+}
+.feedbackComplaints .FCTips{
+    display: flex;
+    height: 64rpx;
+    margin-bottom: 32rpx;
+    border-radius: 16rpx;
+    background-color: #ffffff;
+    padding-top: 16rpx;
+    padding-bottom: 16rpx;
+}
+.feedbackComplaints .FCTips image{
+    width: 82rpx;
+    height: 24rpx;
+    margin-left: 24rpx;
+    margin-right: 24rpx;
+    margin-top: 5rpx;
+}
+.feedbackComplaints .FCTips .tipsText{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 440rpx;
+}
+.feedbackComplaints .FCTips .tipsText text{
+    font-size: 24rpx;
+    line-height: 34rpx;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+
+    /* 内容文字 */
+
+    color: #4A4A4A;
+}
+.feedbackComplaints .FCTips .tipsText .closeIcon{
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 16rpx;
+}
+.feedbackComplaints .FCTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32rpx;
+    margin-top: 32rpx;
+}
+.feedbackComplaints .FCTitle text{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 56rpx;
+    color: #404040;
+}
+.feedbackComplaints .FCTitle .FCHistoryList{
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 34rpx;
+    text-align: right;
+    color: #4A4A4A;
+}
+.feedbackComplaints .FCContent{
+    position: relative;
+    box-sizing: border-box;
+    width: 686rpx;
+    min-height: 640rpx;
+    background-color: #ffffff;
+    border-radius: 16rpx;
+    margin-bottom: 48rpx;
+    padding: 32rpx;
+}
+.feedbackComplaints .FCContent .contentTop{
+    display: flex;
+    margin-bottom: 48rpx;
+}
+.feedbackComplaints .FCContent .contentTop .section{
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 34rpx;
+    color: #A6A6A6;
+    mix-blend-mode: normal;
+    margin-left: 32rpx;
+}
+.feedbackComplaints .FCContent .contentTop .section text{
+    font-size: 12px;
+    line-height: 34rpx;
+    color: #A6A6A6;
+    mix-blend-mode: normal;
+}
+.feedbackComplaints .FCContent .contentTop .section .downArrow{
+    display: block;
+    width: 16rpx;
+    height: 32rpx;
+    padding-left: 8rpx;
+}
+.feedbackComplaints .FCContent .contentTop text{
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 34rpx;
+    text-align: right;
+    color: #4A4A4A;
+}
+.feedbackComplaints .FCContent .contentTextarea{
+    font-size: 14px;
+    line-height: 40rpx;
+    color: #A6A6A6;
+    mix-blend-mode: normal;
+    
+}
+.feedbackComplaints .FCContent textarea{
+    width: 622rpx;
+    min-height: 300rpx;
+    line-height: 40rpx;
+    margin-bottom: 24rpx;
+}
+.feedbackComplaints .FCContent .weui-textarea-counter{
+    position: absolute;
+    right: 32rpx;
+    bottom: 32rpx;
+}
+.feedbackComplaints .FCPhone{
+    margin-bottom: 198rpx;
+}
+.feedbackComplaints .FCPhone .phoneTitle{
+    display: flex;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 40rpx;
+    color: #4A4A4A;
+    margin-bottom: 32rpx;
+}
+.feedbackComplaints .FCPhone .phoneTitle radio-group{
+    display: flex;
+    
+} 
+.feedbackComplaints .FCPhone .phoneTitle radio-group .isPhone{
+    display: flex;
+    justify-content: space-between;
+    width: 92rpx;
+    margin-left: 48rpx;
+    line-height: 48rpx;
+}
+.feedbackComplaints .FCPhone .phoneTitle radio-group .isPhone .radioView{
+    position: relative;
+}
+.feedbackComplaints .FCPhone .phoneTitle radio-group .isPhone .radioView image{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 32rpx;
+    height: 32rpx;
+    z-index: 1;
+}
+.feedbackComplaints .FCPhone .phoneTitle radio-group .isPhone .radiosButton{
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+}
+
+.feedbackComplaints .FCPhone .phoneNumber{
+    box-sizing: border-box;
+    width: 686rpx;
+    height: 98rpx;
+    background-color: #ffffff;
+    border-radius: 16rpx;
+    padding: 26rpx 32rpx;
+}
+.feedbackComplaints .FCPhone .phoneNumber input{
+    width: 622rpx;
+    height: 46rpx;
+}
+.feedbackComplaints .FCPhone .phoneNumber .inputPlaceholder{
+    font-weight: normal;
+    font-size: 12px;
+    color: #A6A6A6;
+    mix-blend-mode: normal;
+}
+/* .feedbackComplaints button{
+    width: auto !important;
+} */
+.feedbackComplaints .buttonSubmit{
+    width: 686rpx;
+    height: 84rpx;
+    background-color: #7340B3;
+    color: #ffffff;
+    text-align: center;
+    line-height: 84rpx;
+    border-radius: 8rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    margin-bottom: 85rpx;
+}

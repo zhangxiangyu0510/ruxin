@@ -1,0 +1,10 @@
+/* pages/news/news.wxss */
+page {
+  min-height: 100%;
+  background: #fafafa;
+  padding-bottom:108rpx;
+}
+.buyCar{
+  padding-top: 176rpx;
+  margin:0 32rpx;
+}

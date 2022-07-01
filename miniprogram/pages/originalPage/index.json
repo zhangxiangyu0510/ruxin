@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "showPhoneDialog":"../../components/dialogGlobal/dialogGlobal",
+    "sharePosters":"/components/canvasdrawer/canvasdrawer",
+    "indexDialog": "../../miniprogram_npm/weui-miniprogram/dialog/dialog"
+
+  }
+}

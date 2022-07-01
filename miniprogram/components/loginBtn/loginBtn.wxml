@@ -1,0 +1,1 @@
+<button  class="userInfoBtn" wx:if="{{canIUse}}" open-type="getUserInfo" hover-class bindtap='getUserProfile'>登录</button>

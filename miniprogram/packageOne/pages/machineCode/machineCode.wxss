@@ -1,0 +1,100 @@
+/* packageOne/pages/machineCode/machineCode.wxss */
+.machineCode{
+    box-sizing: border-box;
+   padding: 32rpx;
+   background-color:  #fafafa;
+   /* height: 100vh; */
+   height: 100vh;
+}
+.machineCode-title{
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24rpx;
+    line-height: 34rpx;
+    color: #0B85AC;
+    margin-bottom: 32rpx;
+}
+.formSubmit{
+    width: 100%;
+    height: 208rpx;
+    background: #fff;
+    border-radius: 16rpx;
+    margin-bottom: 124rpx;
+}
+.title-input{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 32rpx;
+}
+
+.line{
+    width: 622rpx;
+    height: 1rpx;
+    background-color: #000000;
+    opacity: 0.05;
+    margin: 0 auto;
+}
+.new-placeholder{
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    color: #C9C9C9;
+}
+input{
+    width: 224rpx;
+    margin-right: 74rpx;
+}
+.input-name{
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    color: #404040;
+    margin-right: 48rpx;
+}
+.code-icon{
+    display: flex;
+    justify-content: space-between;   
+}
+.icon{
+    position: relative;
+    width: 48rpx;
+    height: 48rpx;
+    padding-left: 32rpx;
+}
+.icon::after{
+    content: "";
+    display: block;
+    width: 1rpx;
+    height: 48rpx;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    opacity: 0.05;
+}
+.icon image{
+    width: 100%;
+    height: 100%;
+}
+.submitButton{
+    width: 100%;
+}
+.butText{
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32rpx;
+    line-height: 40rpx;
+    /* identical to box height, or 125% */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+}

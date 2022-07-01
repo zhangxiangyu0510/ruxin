@@ -1,0 +1,102 @@
+<dialogGlobal componentType="1" id="dialogProtocol" />
+<commonGlobal></commonGlobal>
+<!-- <commonService bind:openSharePosters="openSharePosters"></commonService> -->
+<view wx:if="{{shopId}}" class="page">
+    <commonService bottom='210rpx' understanding='{{false}}' bgColor='background: linear-gradient(180deg, #4a499b 0%, #62add5 100%);' bind:openSharePosters="openSharePosters"></commonService>
+    <!-- <canvasdrawer  bind:openSharePosters="openSharePosters"></canvasdrawer> -->
+    <!--  <canvasdrawer bind:closeSharePosters="closeSharePosters" wx:if="{{showShare}}" painting='{{painting}}'></canvasdrawer> -->
+    <sharePosters bind:closeSharePosters="closeSharePosters" wx:if="{{showShare}}" painting='{{painting}}' goodsInfo='{{detailFrom}}' wxQrcodeData='{{wxQrcodeData}}'></sharePosters>
+    <view class="product_img">
+        <image  src="{{detailFrom.image}}" alt="" class="imgStyle" />
+    </view>
+    <view wx:if="{{!nuskinUserInfo.userName}}" class="product_body">
+        <view class="body_title">{{detailFrom.title}}</view>
+        <view class="price_info">
+            <!-- style="color:{{themeColor}}" -->
+            <view class="price">零售价</view>
+            <view class="price_num">¥{{detailFrom.retailPrice}}</view>
+        </view>
+        <view class="price_star">
+            <view class="price_star_info">
+                <view class="price_star_price" style="margin:34rpx 20rpx 0 20rpx;">星级价:</view>
+                <view class="price_star_num" style="margin-top:34rpx;">¥{{detailFrom.starPrice}}</view>
+            </view>
+            <view bindtap="toH5Join" class="price_star_btn">加入星级顾客</view>
+            <view class="price_star_bottom">申请成为星级顾客，即可享受星级优惠价。</view>
+        </view>
+    </view>
+    <view wx:else class="product_body member">
+        <view class="body_title">{{detailFrom.title}}</view>
+        <view class="price_info">
+            <view class="price">
+                <image src="../../images/icons/price1.png"></image>
+                <view class="text">零售价</view>
+            </view>
+            <!-- style="color:{{themeColor}}" -->
+            <view class="price_num">¥{{detailFrom.retailPrice}}</view>
+        </view>
+        <view class="price_info" style="margin-bottom: 0;">
+            <!-- color:{{themeColor}}; -->
+            <view class="price  memberText">
+                <image src="../../images/icons/price2.png"></image>
+                <view class="text">星级价</view>
+            </view>
+            <view class="price_num memberNum">¥{{detailFrom.starPrice}}</view>
+        </view>
+        <!-- <view class="price_star">
+            <view class="price_star_info">
+                <view class="price_star_price" style="margin:34rpx 20rpx 0 20rpx;">星级价:</view>
+                <view class="price_star_num" style="margin-top:34rpx;">¥{{detailFrom.starPrice}}</view>
+            </view>
+            <view bindtap="toH5Join" class="price_star_btn">加入星级顾客</view>
+            <view class="price_star_bottom">申请成为星级顾客，即可享受星级优惠价。</view>
+        </view> -->
+    </view>
+    <view class="product_bottom">
+        <view class="title">组合包含以下产品:</view>
+        <view class="bottom_details">
+            <view bindtap="goH5Detail" data-item="{{item.itemInfo}}" class="detail_list" wx:for="{{detailFrom.shopProductItemList}}" wx:key="index">
+                <view class="name" data-id="{{item.id}}">{{item.title || '暂无名称'}} </view>
+                <view class="num">数量: <view style="margin-left: 10rpx;display: inline-block;">{{item.total}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 地址选择 -->
+    <view class="addressSelection">
+        <view class="sendTo">送至</view>
+        <picker wx:if="{{multiArray.length}}" range-key='label' mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+            <view class="location">{{userAddressData[0].label+','+userAddressData[1].label}} <image mode="widthFix" src="{{imageUrl}}/icons/downArrow.svg"></image>
+            </view>
+        </picker>
+
+    </view>
+    <view class="zhanwei"></view>
+
+    <!-- <picker   level="city" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <view class="right_data" wx:if="{{region.length}}">
+            {{region[0]}}，{{region[1]}}
+          </view>
+        </picker> -->
+    <view class="footerBox">
+        <view wx:if='{{inStock}}' class="footertabs">
+            <view class="numberText">数量</view>
+            <view bindtap="calculateNum" data-value='{{-1}}' class="subtract">—</view>
+            <view class="number">{{itemNum}}</view>
+            <view bindtap="calculateNum" data-value='{{1}}' class="add">+</view>
+            <view></view>
+            <view></view>
+            <view bindtap="toCartPage" class="cartBox">
+            <view class="cartCount">{{cartCount}}</view>
+                <image mode="widthFix" src="../../images/icons/h5cart.svg"></image>
+                <view>购物车</view>
+            </view>
+            <view bindtap="addcart" class="cartBut">加入购物车</view>
+        </view>
+        <view class="understock" wx:else>库存不足</view>
+    </view>
+    <!-- <commonService bind:openSharePosters="openSharePosters"></commonService> -->
+</view>
+<view wx:else>
+    <noData titleText='暂无店铺信息'></noData>
+</view>

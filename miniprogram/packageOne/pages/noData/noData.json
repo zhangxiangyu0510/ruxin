@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "noData":"../../../components/noData/index"
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "commonHeader":"../../../components/commonHeader/commonHeader",
+    "indexDialog":"../../..//miniprogram_npm/weui-miniprogram/dialog/dialog"
+  },
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh":false
+}

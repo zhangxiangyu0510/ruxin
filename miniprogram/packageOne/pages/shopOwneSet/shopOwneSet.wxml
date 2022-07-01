@@ -1,0 +1,179 @@
+<commonGlobal bind:userInfo="getUserInfo"></commonGlobal>
+<view class="shopowenr_all">
+<view class="shopowenr_header">
+  <view class="shopowenr_header_logo1">
+    <image src="{{userInfo.avatar?userInfo.avatar:'data:image/svg+xml,'+my_header_avater}}"></image>
+  </view>
+  <view class="shopowenr_header_info">
+    <view class="shopowenr_top_header">
+      <view class="shopowenr_info1">{{userInfo.nickname}}</view>
+      <view class="shopowenr_top_header_img" wx:if="{{shopInfo.shop&&shopInfo.shop.level}}">
+        <image src="{{levelImg}}"></image>
+      </view>
+    </view>
+    <view class="shopowenr_info2All">
+      <view class="info-button">
+        <view class="shopowenr_info2"><text>{{userInfo.fansNum}}</text>粉丝数</view>
+        <view class="shopowenr_info3" wx:if="{{age}}"><text>{{userInfo.shopAge}}</text>年店主</view>
+      </view>
+      <view class="shopowenr_header_right">
+        <button class="shopowenr_header_right_btn" bindtap="cancleFellow">取消关注</button>
+        <!-- <button wx:else="follow" style="background: {{themeColor}};color:#fff;" class="shopowenr_header_right_btn" bindtap="toFollow">关注</button> -->
+      </view>
+      
+    </view>
+   
+
+  </view>
+  
+  
+</view>
+<view class="shopowenr_header1" wx:if="{{score}}">
+<!-- 低于4.5分按照4.5分计算高于4.5分按照实际评分计算 -->
+  <view>店铺评分 <text>{{userInfo.shop.score}}</text> 分</view>
+  <view class="scoreBar">
+    <image src="data:image/svg+xml,{{scoreIcon}}"></image>
+    <image class="scoreOpacity" src="../../images/userCenterIcon/scoreOpcity.svg" alt=""></image>
+  </view>
+  <image class="tips-icon" bindtap="openConfirm" src="{{'data:image/svg+xml,'+tipsIcon}}" alt="" data-type="scores"></image>
+</view>
+
+<view class="shopowenr_center1" wx:if="{{information}}">
+  <view class="shopowenr_center1_header">
+
+    <text class="shopowenr_center1_text1">个人信息</text>
+    <!-- <text class="shopowenr_center1_text5" bindtap="goEdit">编辑</text> -->
+  </view>
+  <view class="shopowenr_center1_center">
+    <view class="shopowenr_center1BoxAll">
+      <view class="shopowenr_center1Box1">
+        <view class="shopowenr_center1_item">
+          <text class="shopowenr_center1_text3">姓名</text>
+          <text class="shopowenr_center1_text2">{{userInfo.name}}</text>
+        </view>
+        <view class="shopowenr_center1_item">
+          <text class="shopowenr_center1_text3">性别</text>
+          <text class="shopowenr_center1_text2">{{genderData[userInfo.gender]}}</text>
+        </view>
+        <view class="shopowenr_center1_item">
+          <text class="shopowenr_center1_text3">年龄</text>
+          <text class="shopowenr_center1_text2">{{userInfo.age}}</text>
+        </view>
+        <view class="shopowenr_center1_item">
+          <text class="shopowenr_center1_text3">星座</text>
+          <text class="shopowenr_center1_text2">{{userInfo.constellation||''}}</text>
+        </view>
+        <view class="shopowenr_center1_item">
+          <text class="shopowenr_center1_text3">年资</text>
+          <text class="shopowenr_center1_text2">{{userInfo.shopAge}}年</text>
+        </view>
+      </view>
+      <view class="shopowenr_center1Box2">
+        <view class="shopowenr_center1_item">
+          <view class="shopowenr_center1_img1">
+            <image src="../../images/userCenterIcon/phone.svg"></image>
+          </view>
+          <text class="shopowenr_center1_text4">{{userInfo.mobile}}</text>
+        </view>
+        <view class="shopowenr_center1_item" wx:if="{{userInfo.wechatNo}}">
+          <view class="shopowenr_center1_img1">
+            <image src="../../images/userCenterIcon/wechat.svg"></image>
+          </view>
+          <text class="shopowenr_center1_text4">{{userInfo.wechatNo}}</text>
+        </view>
+        <view class="shopowenr_center1_item" wx:if="{{userInfo.xiaoHongShuNo}}">
+          <view class="shopowenr_center1_img1">
+            <image src="../../images/userCenterIcon/redbook.svg"></image>
+          </view>
+          <text class="shopowenr_center1_text4">{{userInfo.xiaoHongShuNo}}</text>
+        </view>
+        <view class="shopowenr_center1_item" wx:if="{{userInfo.tiktokNo}}">
+          <view class="shopowenr_center1_img1">
+            <image src="../../images/userCenterIcon/TikTok.svg"></image>
+          </view>
+          <text class="shopowenr_center1_text4">{{userInfo.tiktokNo}}</text>
+        </view>
+        <view class="shopowenr_center1_item" wx:if="{{userInfo.microblogNo}}">
+          <view class="shopowenr_center1_img1">
+            <image src="../../images/userCenterIcon/micro-blog.svg"></image>
+          </view>
+          <text class="shopowenr_center1_text4">{{userInfo.microblogNo}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="shopowenr_center1_bottom" wx:if="{{userInfo.provinceName&&userInfo.cityName}}">
+      <view class="shopowenr_center1_bottom_img">
+        <image src="../../images/userCenterIcon/address.svg"></image>
+      </view>
+      <text>{{userInfo.provinceName}}{{userInfo.cityName}}</text>
+    </view>
+  </view>
+</view>
+<view class="shopowenr_center4" wx:if="{{badgeData.length}}">
+  <view class="shopowenr_center1_header">
+    <view class="shopowenr_center1_text1">
+        <view>徽章馆</view>
+        <image class="tips-icon1" bindtap="openConfirm" src="{{'data:image/svg+xml,'+tipsIcon2}}" alt="" data-type="bradge"></image>
+    </view>
+    <text class="shopowenr_center1_text5" bindtap="goBadge">查看全部徽章</text>
+  </view>
+  <view class="shopowenr_center4_body">
+    <view class="shopowenr_center4_body_item" wx:for="{{badgeData}}" wx:key="index" bindtap="goBadgeDetail" data-item="{{item}}">
+      <view class="shopowenr_center4_body_img1">
+        <image src="{{item.imageAchieve}}"></image>
+      </view>
+      <text>{{item.name||''}}</text>
+    </view>
+  </view>
+</view>
+</view>
+<mp-dialog title="" show="{{dialogShow}}">
+    <view class="dialogBox" wx:if="{{scores}}">
+      <view class="title">店铺评分说明</view>
+      <view class="dialogContent">1、店铺评分类型：店铺评分，即顾客对于订单所做的服务评分。
+        2、店铺评分描述：好评5分；中评3分；差评1分。
+        3、店铺评分计算：服务评分=店铺内订单评分加总/已评分订单数。
+        4、店铺评分标准：以0.5分为最小评分单位，店铺评分最低为0.5分，最高为5分。
+        5、其它：顾客收货后5天内未主动评价，则该订单视为未评价。</view>
+      <view class="closeIcon"  bindtap="closeConfirm">
+        <image src="{{'data:image/svg+xml,'+tipsCloseIcon}}"></image>
+      </view>
+    </view>
+    <view class="dialogBox" wx:if="{{bradge}}">
+      <view class="title"> 徽章说明</view>
+      <view class="dialogContent">1、徽章分类：共3类，分别为我的成就，善的力量，及我的足迹。
+        2、各类徽章说明：
+        1）我的成就：
+        备受关注：根据店铺的粉丝数获得相应徽章。
+        一见倾心：1个粉丝
+        未来可期：5个粉丝
+        十分热爱：10个粉丝
+        胜友如云：25个粉丝
+        百里挑一：125个粉丝
+        万众瞩目：500个粉丝
+        十万伙集：1000个粉丝
+        分享达人：根据店铺所累计的顾客数获得相应徽章。
+        立春：1个顾客
+        雨水：10个顾客
+        惊蛰：50个顾客
+        春分：100个顾客
+        谷雨：500个顾客
+        订单在手：根据店铺所累计的订单数量获得相应徽章。
+            开单大吉：1笔订单
+        订单不断：10笔订单
+        经营有道：50笔订单
+        百战百胜：100笔订单
+        大有作为：500笔订单
+        2）善的力量：
+        善心大使/常任善心大使/善心特使/常任善心特使：积极参与蜜儿餐滋养计划所获徽章。
+        NU SKIN 如新集团及事业经营伙伴对于世界各地儿童因营养不良而死亡深感忧虑，因此于2002年发起了「蜜儿餐滋养计划(Nourish The Children)」，旨在凝聚遍布全球事业经营伙伴、顾客及员工的力量，透过持续性的蜜儿餐捐助，以滋养全球饥饿及营养不良的儿童，并拯救他们的生命。
+        微笑天使/荣誉理事/荣誉常务理事：积极捐赠如新公益基金会所获徽章。
+        如新公益基金会是由如新（中国）日用保健品有限公司发起，经上海市民政局批准登记，成立于2018年12月29日的一家非公募基金会。
+        3）我的足迹：根据与如新中国走过的城市/国家获得相应徽章。
+        </view>
+      <view class="closeIcon"  bindtap="closeConfirm">
+        <image src="{{'data:image/svg+xml,'+tipsCloseIcon}}"></image>
+    </view>
+    </view>
+  </mp-dialog>

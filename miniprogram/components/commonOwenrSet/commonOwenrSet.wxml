@@ -1,0 +1,153 @@
+<view class="shopowenr_all">
+
+  <view class="shopowenr_header">
+    <view class="shopowenr_header_logo1"></view>
+    <view class="shopowenr_header_info">
+      <text class="shopowenr_info1">薛静静呀</text>
+      <view class="shopowenr_info2All">
+        <view class="shopowenr_info2"><text>45</text>粉丝数</view>
+        <view class="shopowenr_info3"><text>1.9</text>年店主</view>
+      </view>
+    </view>
+    <view class="shopowenr_header_right" wx:if="{{ifShow}}">
+      <view class="shopowenr_right1" bindtap="goConfig">
+        <view class="shopowenr_right1_icon"></view>
+        <text class="shopowenr_text">设置人设</text>
+      </view>
+      <view class="shopowenr_right1" bindtap="goReview">
+        <view class="shopowenr_right1_icon"></view>
+        <text class="shopowenr_text">预览人设</text>
+      </view>
+    </view>
+  </view>
+  <view class="shopowenr_header1">
+    <view>店铺评分 <text>4.9</text> 分</view>
+  </view>
+  <view class="shopowenr_center1">
+    <view class="shopowenr_center1_header">
+
+      <text class="shopowenr_center1_text1">个人信息</text>
+      <text class="shopowenr_center1_text5" bindtap="goEdit">编辑</text>
+    </view>
+    <view class="shopowenr_center1_center">
+      <view class="shopowenr_center1BoxAll">
+        <view class="shopowenr_center1Box1">
+          <view class="shopowenr_center1_item">
+            <text class="shopowenr_center1_text3">姓名</text>
+            <text class="shopowenr_center1_text2">薛静静</text>
+          </view>
+          <view class="shopowenr_center1_item">
+            <text class="shopowenr_center1_text3">性别</text>
+            <text class="shopowenr_center1_text2">女</text>
+          </view>
+          <view class="shopowenr_center1_item">
+            <text class="shopowenr_center1_text3">年龄</text>
+            <text class="shopowenr_center1_text2">30</text>
+          </view>
+          <view class="shopowenr_center1_item">
+            <text class="shopowenr_center1_text3">星座</text>
+            <text class="shopowenr_center1_text2">天蝎座</text>
+          </view>
+          <view class="shopowenr_center1_item">
+            <text class="shopowenr_center1_text3">年资</text>
+            <text class="shopowenr_center1_text2">2年</text>
+          </view>
+        </view>
+        <view class="shopowenr_center1Box2">
+          <view class="shopowenr_center1_item">
+            <view class="shopowenr_center1_img1"></view>
+            <text class="shopowenr_center1_text4">123456789</text>
+          </view>
+          <view class="shopowenr_center1_item">
+            <view class="shopowenr_center1_img1"></view>
+
+            <text class="shopowenr_center1_text4">123456789</text>
+          </view>
+          <view class="shopowenr_center1_item">
+            <view class="shopowenr_center1_img1"></view>
+
+            <text class="shopowenr_center1_text4">123456789</text>
+          </view>
+          <view class="shopowenr_center1_item">
+            <view class="shopowenr_center1_img1"></view>
+            <text class="shopowenr_center1_text4">12345678909</text>
+          </view>
+          <view class="shopowenr_center1_item">
+            <view class="shopowenr_center1_img1"></view>
+            <text class="shopowenr_center1_text4">12345678909</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="shopowenr_center1_bottom">
+        <view class="shopowenr_center1_bottom_img"></view>
+        <text>中国上海市</text>
+      </view>
+    </view>
+
+
+  </view>
+
+
+  <view class="shopowenr_center1_fu" wx:if="{{ifShow}}">
+    <view class="shopowenr_center1_header">
+
+      <text class="shopowenr_center1_text1">销售贡献</text>
+      <text  class="shopowenr_center1_text6">仅限NU店，业绩查询请至星享城</text>
+    </view>
+    <view class="shopowenr_center2_body">
+
+      <view class="shopowenr_center2_body_item">
+
+        <view class="shopowenr_center2_body_text1">29</view>
+        <view class="shopowenr_center2_body_text2">累计订单数</view>
+        <view class="shopowenr_center2_body_text3">提示1文案待定</view>
+
+
+      </view>
+      <view class="shopowenr_center2_body_item">
+        <view class="shopowenr_center2_body_text1"><text>￥</text>28419</view>
+        <view class="shopowenr_center2_body_text2">累计销售额</view>
+        <view class="shopowenr_center2_body_text3">提示2文案待定</view>
+      </view>
+
+
+    </view>
+  </view>
+
+  <view class="shopowenr_center3" wx:if="{{ifShow}}">
+    <view class="shopowenr_center1_header">
+
+      <text class="shopowenr_center1_text1">店铺等级</text>
+      <text class="shopowenr_center1_text5">查看详情</text>
+    </view>
+    <view class="shopowenr_center3_body">
+
+      <progress percent="20" class="shopowenr_progress" show-info stroke-width="3" />
+      <view class="shopowenr_center3_body_right">
+        <text class="shopowenr_center3_body_text2">下一等级权益：</text>
+        <view class="shopowenr_center3_body_textBox">
+          <text class="shopowenr_center3_body_text1">1、基本功能</text>
+          <text class="shopowenr_center3_body_text1">2、店铺换肤</text>
+          <text class="shopowenr_center3_body_text1">3、奖励100个NU币</text>
+          <text class="shopowenr_center3_body_text1">4、奖励1000个NU币</text>
+          <text class="shopowenr_center3_body_text1">5、奖励10000个NU币</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="shopowenr_center4">
+    <view class="shopowenr_center1_header">
+
+      <text class="shopowenr_center1_text1">徽章馆</text>
+      <text class="shopowenr_center1_text5">查看详情</text>
+    </view>
+    <view class="shopowenr_center4_body">
+      <view class="shopowenr_center4_body_item" wx:for="{{badgeData}}" wx:key="index">
+        <view class="shopowenr_center4_body_img1"></view>
+        <text>{{item.name}}</text>
+      </view>
+
+    </view>
+  </view>
+</view>

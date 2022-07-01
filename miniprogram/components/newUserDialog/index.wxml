@@ -1,0 +1,8 @@
+<view class="newUserBox" wx:if="{{false}}">
+    <view class="newUser">
+        <view class="closeIconBox">
+            <mp-icon bindtap="closeShare" icon="close" color="#FFFFFF" size="{{25}}"></mp-icon>
+        </view>
+        <image bindtap="goLogin" src="https://myshop-dev-1259463275.cos.ap-shanghai.myqcloud.com/myshop/imgs/newUser.png"class="share-image"></image>
+    </view>
+</view>

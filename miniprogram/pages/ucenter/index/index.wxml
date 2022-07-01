@@ -1,0 +1,92 @@
+
+<commonGlobal binddialogevent="showDialog"></commonGlobal>
+<dialogGlobal componentType="1" id="dialogProtocol"/>
+<view class="my" style="background: url(http://{{bg}});">
+  <image class="header_img" src="{{'data:image/svg+xml,'+header_img}}" mode="widthFix"></image>
+<!-- header -->
+  <view class="my_top_header">
+    <view class="my_header">
+      <view class="my_header_avater" bindtap="goOwner">
+        <image src="{{hasUserInfo&&userInfo&&userInfo.avatar||'data:image/svg+xml,'+my_header_avater}}"></image>
+      </view>
+      <view class="my_header_infos" bindtap="goOwner" wx:if="{{!hasUserInfo}}">
+        <view class="toLogin"><text>立即登录</text></view>
+      </view>
+      <view class="my_header_infos" bindtap="goOwner" wx:if="{{hasUserInfo}}">
+      <view class="my_infos_name">{{userInfo.nickname||userInfo.mobile}}</view>
+      <view class="my_infos_icon"  wx:if="{{userInfo.identityTag}}">
+          <view class="left_icons" >
+            <image src="{{identityTagIcon1}}" mode="widthFix"></image>
+          </view>
+          <view class="left_icons_text">
+            <image src="{{identityTagIcon2}}" mode="widthFix"></image>
+            <text class="left_text">{{identityTagData[userInfo.identityTag].text}}</text>
+          </view>
+        </view>
+      </view>
+        <view class="my_header_edit" bindtap="editInfo">
+        <view class="my_edit_icon"><image src="{{imageUrl}}/icons/edit.svg" mode="widthFix"></image></view>
+        <view class="my_edit_text">完善资料</view>
+        </view>
+    </view>
+  </view>
+    <view class="become_star_box" bindtap="becomeStar" wx:if="{{!nuskinUserInfo.userName}}">
+        <image class="top_img" src="{{'data:image/svg+xml,'+svg1}}" mode="widthFix"></image>
+        <view class="left_top_text">成为星级顾客，享星级优惠价</view>
+        <view class="right_top_box">
+            <image class="right_img" src="{{'data:image/svg+xml,'+svg2}}" mode="widthFix"></image>
+            <view class="right_text" style="color:{{themeColor}};">成为星级顾客</view>
+        </view>
+        <image class="bottom_img" src="{{imageUrl}}/icons/bottom.svg" mode="widthFix"></image>
+    </view>
+  <view class="en_box" bindtap="goEnhome">
+  <view><image class="en_box_img" src="{{imageUrl}}/icons/en.png" mode="widthFix"></image></view>
+  <view class="my_ens">我的en悦家点数</view>
+  <view class="en_right_box">
+    <view class="en_num">{{enNumber}}</view>
+  <image class="en_right_img" src="{{imageUrl}}/icons/en_right.svg" mode="widthFix"></image>
+  </view>
+  </view>
+  <!-- self buy -->
+  <view class="myself_buy_box">
+    <view class="myself_order_box">
+      <view class="myself_order_title">我的订单<view class="myself_order_all" bindtap="myOrder" data-orderIndex="4">查看全部</view></view>
+      <view class="myself_status_box">
+        <view class="myself_status_single" wx:for="{{status}}" wx:key="index" bindtap="myOrder" data-orderIndex="{{index}}">
+          <view class="myself_status_single_icon">
+            <view class="infoSum" wx:if="{{item.orderCount!=0}}">{{item.orderCount>999?'999+':item.orderCount}}</view>
+            <image src="{{item.urlIcon}}"></image>
+          </view>
+          <view class="myself_status_single_text">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- coupons -->
+  <view class="coupons_box">
+  <view class="single_line_box" bindtap="myCoupons">
+  优惠券
+  <view class="single_right_arrow">
+  <image src="{{imageUrl}}/icons/single_right.svg" mode="widthFix"></image>
+  </view>
+  </view>
+  <view class="single_line_box" bindtap="goAddress">
+  我的地址
+  <view class="single_right_arrow">
+  <image src="{{imageUrl}}/icons/single_right.svg" mode="widthFix"></image>
+  </view>
+  </view>
+  <view class="single_line_box" bindtap="goBill">
+  发票管理
+  <view class="single_right_arrow">
+  <image src="{{imageUrl}}/icons/single_right.svg" mode="widthFix"></image>
+  </view>
+  </view>
+  <view class="single_line_box" bindtap="enterFeedback">
+  反馈与投诉
+  <view class="single_right_arrow">
+  <image src="{{imageUrl}}/icons/single_right.svg" mode="widthFix"></image>
+  </view>
+  </view>
+  </view>
+</view>

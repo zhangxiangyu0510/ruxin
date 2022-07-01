@@ -1,0 +1,41 @@
+/* pages/customer/feedbackComplaintsDetail/feedbackComplaintsDetail.wxss */
+.feedbackComplaintsDetail{
+    box-sizing: border-box;
+    padding: 30rpx 32rpx 0;
+    background-color: #fafafa;
+    min-height: 100vh;
+    font-family: PingFang SC;
+    font-style: normal;
+}
+.feedbackComplaintsDetail .detailTitle{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 56rpx;
+    color: #404040;
+    margin-bottom: 32rpx;
+}
+.feedbackComplaintsDetail .detailContent{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 40rpx;
+    color: #404040;
+    mix-blend-mode: normal;
+    margin-bottom: 32rpx;
+}
+.feedbackComplaintsDetail .detailImg{
+    margin-bottom: 16rpx;
+}
+.feedbackComplaintsDetail .detailImg image{
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 16rpx;
+    margin-right: 16rpx;
+    margin-bottom: 16rpx;
+}
+.feedbackComplaintsDetail .phoneNumber{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 40rpx;
+    color: #404040;
+    mix-blend-mode: normal;
+}

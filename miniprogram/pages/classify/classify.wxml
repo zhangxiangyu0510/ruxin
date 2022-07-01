@@ -1,0 +1,71 @@
+
+<dialogGlobal componentType="1" id="dialogProtocol"/>
+<commonGlobal></commonGlobal>
+<view class="classify">
+<view class="header_box">
+<commonHeader titleText='产品分类' class="find_comm_header"></commonHeader>
+  <!-- 搜索 -->
+  <view class="spe_fixed">
+  <view class="topSearch_bg">
+  <view class="topSearch" bindtap="focusH5">
+    <form class="weui-search-bar__form search_form">
+      <div class="weui-search-bar__box">
+        <i class="weui-icon-search"></i>
+        <input disabled="{{true}}" type="search" class="weui-search-bar__input search_left_icon" id="search_input" placeholder="搜索你想要的宝贝" />
+        <a href="javascript:" class="weui-icon-clear" id="search_clear"></a>
+      </div>
+    </form>
+  </view>
+</view>
+  <view class="classify_tabs">
+    <scroll-view  scroll-x="true" enhanced="true" show-scrollbar="false">
+    <view class="topTabs">
+      <mp-tabs tabs="{{tabs}}" tabUnderlineColor='{{themeColor}}' activeTab="{{activeId}}" swiperClass="weui-tabs-swiper" bindtabclick="onTabCLick" bindchange="onChange" tab-class="tab-item">
+      </mp-tabs>
+      <!-- <view bindtap="changeTopTabs" data-index="{{index}}" class="tabsItem" wx:for="{{tabs}}" wx:key="{{index}}">
+        <view class="itemName">{{item.title}}</view>
+        <view wx:if="{{tabsIndex==index}}" style="background-color:{{themeColor}}" class="changeColor"></view>
+      </view> -->
+    </view>
+  </scroll-view>
+  </view>
+</view>
+</view>
+    <!-- 内容 -->
+    <view class="classification" style="height: {{maxHeight}}px;"> 
+      <view class="left" >
+        <scroll-view  scroll-y="true">
+        <view class="leftClassificationBox" wx:for="{{leftClassification}}" wx:key="index">
+          <view bindtap="changeLeftClassification" data-index="{{index}}" data-id="{{item.id}}" style="color:{{index==leftIndex?themeColor : ''}};background:{{index==leftIndex ? '#fafafa' : '#fff'}}" class="{{ index==leftIndex ?  'leftChange item' :'item'}}">{{item.name}}</view>
+        </view>
+      </scroll-view>
+      </view>
+      <scroll-view scroll-y='true' bindscrolltolower='loadBottom'>
+      <view class="right"> 
+        <view class="getMore" bindtap="goAll" wx:if="{{rightProductList.length!=0}}">
+        <text class="right_text" >查看全部</text>
+        <view class="right_icon"><image src="{{imageUrl}}/icons/right_icon.svg"></image></view>
+        </view>
+        <view class="right_product">
+        <!-- wx:if="{{item.itemPrice && item.itemPrice.length}}" -->
+        <view  wx:for="{{rightProductList}}" wx:key="index" class="goodsItem">
+        <view bindtap="goH5Detail" data-item="{{item}}">
+          <view class="imgBox">
+            <image src="{{item.itemImage}}"></image>
+          </view>
+          <view class="goodsName">
+            {{item.itemName}}
+          </view>
+        </view>
+          <!-- <view class="footerBut">
+            <view  class="FullReduction"></view>
+            <image class="butIcon" src="data:image/svg+xml,{{addIcon}}" mode="widthFix" bindtap="addToCar"></image>
+          </view> -->
+        </view>
+      </view>
+   
+      </view> 
+    </scroll-view>
+    </view>
+</view>
+

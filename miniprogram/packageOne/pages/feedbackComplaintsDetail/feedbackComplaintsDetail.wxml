@@ -1,0 +1,17 @@
+<!--pages/customer/feedbackComplaintsDetail/feedbackComplaintsDetail.wxml-->
+<commonGlobal></commonGlobal>
+<view class="feedbackComplaintsDetail">
+    <view class="detailTitle"><text>{{checkedValueType[DetailData.type]}}</text></view>
+    <view class="detailContent">
+        <text>{{DetailData.description}}</text>
+    </view>
+    <view class="detailImg" >
+        <image wx:for="{{DetailData.images}}" wx:key="index" src="{{item}}" 
+        data-url="{{item}}" bindtap="handleBindImg"></image>
+    </view>
+    <view class="phoneNumber" wx:if="{{DetailData.mobile}}">
+        <text>回访手机号：</text>
+        <text>{{DetailData.mobile}}</text>
+    </view>
+    <view></view>
+</view>

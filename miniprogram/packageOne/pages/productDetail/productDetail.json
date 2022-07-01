@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "commonService":"/components/commonService/commonService",
+        "commonNoticeDialog":"/components/commonNoticeDialog/commonNoticeDialog",
+        "sharePosters":"/components/canvasdrawer/canvasdrawer",
+        "noData":"/components/noData/index"
+
+    },
+    "navigationBarTitleText": "产品详情"
+}

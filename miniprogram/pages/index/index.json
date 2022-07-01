@@ -1,0 +1,20 @@
+{
+  "usingComponents": {
+    "commonHeader":"/components/commonHeader/commonHeader",
+    "commonService":"/components/commonService/commonService",
+    "commonNoticeDialog":"/components/commonNoticeDialog/commonNoticeDialog",
+    "sharePosters":"/components/canvasdrawer/canvasdrawer",
+    "productItem":"/components/productItem/productItem",
+    "commonNeoanthropicDialog":"/components/commonNeoanthropicDialog/commonNeoanthropicDialog"
+  },
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh":false,
+  "onReachBottomDistance":100,
+  "navigateToMiniProgramAppIdList": [
+       "wxc0e6a1cbe908790b",
+       "wx417689a96ccc65d6",
+       "wx8a63e3382df92d5b",
+       "wx5a9036a629064441"
+    ]
+}

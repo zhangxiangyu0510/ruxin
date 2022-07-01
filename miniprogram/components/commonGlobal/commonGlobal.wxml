@@ -1,0 +1,19 @@
+<!--components/commonGlobal/commonGlobal.wxml-->
+<!-- 开启nu店之旅 -->
+<commonNeoanthropicDialog wx:if="{{NeoanthropicDialogShow}}" bindclosePosters='closePosters'></commonNeoanthropicDialog>
+<!-- 支付关注当前店主 -->
+<view class="common_dialog_bg" wx:if="{{payDialog}}">
+<view class="addInfo_dialog">
+  <view class="addInfo_dialog_content_box_bg">
+    <view class="addInfo_dialog_content_box">
+    <view class="addInfo_dialog_con_logo">
+    <image src="data:image/svg+xml,{{payLogo}}"></image>
+    </view>
+    <view class="addInfo_dialog_con_text">下单成功</view>
+    <view class="addInfo_dialog_sub_text">已为您自动关注当前店主</view>
+    <view class="addInfo_dialog_sub_text">以便给您提供更优质的服务</view>
+    <view class="addInfo_dialog_btn" style="background: {{themeColor}};" bindtap="closeDialog">我已知晓</view>
+    </view>
+  </view>
+  </view>
+</view>

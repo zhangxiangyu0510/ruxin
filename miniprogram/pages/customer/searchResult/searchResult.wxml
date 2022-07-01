@@ -1,0 +1,14 @@
+<view class="searchResult">
+  <view class="search_header">
+    <view class="search_header_item">
+      <view class="search_icon">
+        <i class="weui-icon-search"></i>
+        
+      </view>
+      <input type="text" class="search_inpt" placeholder="大家都在搜“面膜”" placeholder-class="search_ph" />
+    </view>
+  </view>
+
+  <productItem ifShow="{{thisShow}}" bind:goEdit="goEdit" bind:goReview="goReview" bind:goConfig="goConfig"> </productItem>
+
+</view>

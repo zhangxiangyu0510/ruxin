@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  },
+  "navigationBarTitleText": "店主信息"
+
+}

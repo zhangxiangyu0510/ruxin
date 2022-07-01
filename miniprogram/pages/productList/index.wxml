@@ -1,0 +1,3 @@
+
+<!-- wx:if="{{webViewSrc}}" -->
+<web-view src="{{webViewSrc}}" bindload="bindLoadHandler"></web-view>

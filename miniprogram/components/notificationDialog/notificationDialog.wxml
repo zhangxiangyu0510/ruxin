@@ -1,0 +1,12 @@
+<!--components/notificationDialog/notificationDialog.wxml-->
+<view  class="notification-container" wx:if="{{ messageList.length > 0 && isShow }}">
+    <block wx:for="{{messageList}}" wx:for-item="message" wx:key="{{ message.messageId }}">
+        <template is="{{ message.messageType }}" data="{{ index, message,messageList,themeColor}}" />
+    </block>
+</view>
+<!-- 解绑换绑 -->
+<template name="mobileChange">
+    <indexDialog show="{{true}}" maskClosable="{{false}}" data-index="{{ index }}" bindbuttontap="tapDialogButton" title="友情提示" buttons="{{[{text: '重新登录'}]}}">
+    <view class="index_dialog_title">您的手机号已解绑/已更换，请重新登录</view>
+</indexDialog>
+</template>

@@ -1,0 +1,51 @@
+<!--pages/feedbackComplaints/feedbackComplaints.wxml-->
+<!-- <commonHeader titleText='反馈与投诉'></commonHeader> -->
+<commonGlobal></commonGlobal>
+<view class="feedbackComplaints">
+    <view class="FCTips" wx:if="{{isShowTips}}">
+        <image class="tips-img" src="{{imageUrl+'/icons/tipsTitle.svg'}}"></image>
+        <view class="tipsText">
+            <text>如有更多反馈，欢迎您致电如新官方热线400-004-5678</text>
+            <!-- <image class="closeIcon" src="{{'../../../images/icons/close.svg'}}" bindtap="handleCloseTips"></image> -->
+        </view>
+    </view>
+    <view class="FCTitle">
+        <text>反馈与投诉</text>
+        <text class="FCHistoryList" bindtap="handleToList">查看历史记录</text>
+    </view>
+    <view class="FCContent">
+        <view class="contentTop">
+            <text>投诉类型</text>
+            <view class="section">
+                <text wx:if="{{!checkedValue}}" bindtap="isShowSheet"bindtap="isShowSheet">请选择</text>
+                <image wx:if="{{!checkedValue}}" class="downArrow" src="{{imageUrl+'/icons/downArrow.svg'}}"></image>
+                <text wx:else="{{!checkedValue}}" bindtap="isShowSheet">{{checkedValue}}</text>
+                <mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}" >
+                </mp-actionSheet>
+            </view>
+        </view>
+        <textarea model:value="{{feedbackComplaintsTextareaValue}}"	placeholder-class="contentTextarea"	maxlength="500" placeholder="您填写的信息越全，问题越容易被有效解决呦～" focus="{{focus}}" />
+        <uploader bind:uploadUrl="uploadUrl"/>
+        <view class="weui-textarea-counter">{{feedbackComplaintsTextareaValue.length}}/500</view>
+    </view>
+    <view class="FCPhone">
+        <view class="phoneTitle" style="padding-bottom: {{!isShowInput?'130rpx':''}};">
+            <text>电话回访</text>
+            <radio-group bindchange="radioChange">
+                <view class="isPhone" wx:for="{{radioItems}}"  wx:key="index">
+                    <view class="radioView">
+                        <radio class="radiosButton" checked="{{item.checked}}" value="{{item.value}}"></radio>
+                        <image src="data:image/svg+xml,{{item.checked?radioOnUrl:radioUrl}}"></image>
+                    </view>
+                    <text>{{item.name}}</text>
+                </view>
+            </radio-group>
+            
+        </view>
+        <view class="phoneNumber" wx:if="{{isShowInput}}">
+            <input type="number" model:value="{{mobile}}" maxlength="11" 	placeholder-class="inputPlaceholder" placeholder="请输入手机号"/>
+        </view>
+    </view>
+    <view class="buttonSubmit" style="background-color:{{themeColor}};" bindtap="ButtonSubmit">提交反馈</view>
+    <!-- <button size="default" type="primary">提交反馈</button> -->
+</view>

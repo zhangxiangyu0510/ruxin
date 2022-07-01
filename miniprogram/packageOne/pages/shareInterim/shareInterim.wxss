@@ -1,0 +1,47 @@
+/* pages/shareInterim/shareInterim.wxss */
+.shareInterim{
+  padding: 0 102rpx 0 94rpx;
+
+}
+.shareInterim .imgbox{
+  margin-top: 356rpx;
+  margin-bottom: 86rpx;
+
+}
+.shareInterim .imgbox image{
+  width: 554rpx;
+}
+.shareInterim .text{
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40rpx;
+  text-align: center;
+  color: #404040;
+  
+}
+.but{
+  /* position: fixed;
+  z-index: 100000;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: red;
+  top: 500rpx;
+  left: 200rpx; */
+}
+.shareModel .cancel{
+  width: 50%;
+  color:#4a4a4a ;
+
+}
+ .shareModel .cancel a{
+  color:#4a4a4a ;
+} 
+ .shareModel .share{
+  height: 112rpx;
+  padding: 0;
+  background-color: #fff;
+  border-left: 2rpx solid #e6e6e6;
+
+
+}

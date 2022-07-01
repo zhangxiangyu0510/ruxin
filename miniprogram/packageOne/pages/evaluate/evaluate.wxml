@@ -1,0 +1,46 @@
+<!--pages/evaluate/evaluate.wxml-->
+<!-- <commonHeader titleText='订单评价'></commonHeader> -->
+<commonGlobal></commonGlobal>
+<view class="evaluateContent">
+    <view class="evaluateInfo">
+        <view class="infoOrder">
+            <text>订单号：</text>
+            <text>{{orderNo}}</text>
+        </view>
+        <view class="time">{{time}}</view>
+        <view class="tipsTitle">请您对本次的购物体验作出评价</view>
+    </view>
+    <view class="evaluate">
+        <view class="comprehensive ECommon">
+            <view class="comprehensiveText">综合评价：</view>
+            <view class="comprehensiveIcon">
+                <view wx:for="{{gradeData}}" wx:key="index" bindtap="handleIsActive" data-item="{{item}}">
+                    <image class="icon"  src="data:image/svg+xml,{{item.active?item.iconUrl:item.notActiveIcon}}"></image>
+                    <text>{{item.text}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="shop ECommon">
+            <view class="shopText">店铺评价：</view>
+            <rate activeColor="#7340B3" value="{{value.shopValue}}" bind:change="change" data-active="店铺评价"></rate>
+        </view>
+        <view class="product ECommon">
+            <view class="productText">产品评价：</view>
+            <rate activeColor="#7340B3" value="{{value.productValue}}" bind:change="change" data-active="产品评价"></rate>
+        </view>
+        <view class="logistics">
+            <view class="logisticsText">物流评价：</view>
+            <rate activeColor="#7340B3" value="{{value.logisticsValue}}" bind:change="change" data-active="物流评价"></rate>
+        </view>
+    </view>
+    <view class="commentsSuggestions">
+        <view class="CSTitle">意见和建议</view>
+        <view class="CSTextarea">
+            <textarea model:value="{{commentsSuggestions}}" placeholder-class="CSTextareaPlaceHolder" auto-height	maxlength="500" placeholder="请输入您的意见和建议的内容" focus="{{focus}}" />
+            <view class="weui-textarea-counter textareaLength">{{commentsSuggestions.length}}/500</view>
+        </view>
+    </view>
+    <view class="onSubmit">
+        <view bindtap="tapSubmit" style="background-color: {{themeColor}};">提交</view>
+    </view>
+</view>

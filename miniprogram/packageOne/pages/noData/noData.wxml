@@ -1,0 +1,4 @@
+<!--packageOne/pages/noData/noData.wxml-->
+<view>
+    <noData/>
+</view>

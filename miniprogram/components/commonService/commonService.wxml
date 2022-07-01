@@ -1,0 +1,24 @@
+<!--components/commonService/commonService.wxml-->
+<view class="commonService" style="bottom: {{bottom}};">
+  <view class="commonService_share" bindtap="toKnow"  style="{{ bgColor ? bgColor : 'background:'+themeColor}}" wx:if="{{understanding}}">
+  <view class="commonService_bg"><image class="commonService_bg_img" src="{{imageUrl}}/icons/service_bg.svg" mode="widthFix"></image></view>
+  <view class="spe_commonService_text">了解如新</view>
+  </view>
+<view class="commonService_share" bindtap="openSharePosters"  style="{{ bgColor ? bgColor : 'background:'+themeColor}}" wx:if="{{showShare}}">
+<view class="commonService_bg"><image class="commonService_bg_img" src="{{imageUrl}}/icons/service_bg.svg" mode="widthFix"></image></view>
+<view class="commonService_icon"><image class="add_image" src="{{imageUrl}}/icons/share.svg" mode="widthFix"></image></view>
+<view class="commonService_text">分享</view>
+</view>
+<view class="commonService_customer" bindtap="{{!buttonClicked?'onService':''}}" style="{{ bgColor ? bgColor : 'background:'+themeColor}}" wx:if="{{showCustomer}}">
+  <view class="commonService_bg"><image
+    class="commonService_bg_img" src="{{imageUrl}}/icons/service_bg.svg" mode="widthFix"></image></view>
+  <view class="commonService_icon"><image class="add_image" src="{{imageUrl}}/icons/customer.svg" mode="widthFix"></image></view>
+  <view class="commonService_text">店主</view>
+</view>
+<!-- <indexDialog show="{{hasPhone}}" bindbuttontap="tapDialogButton" buttons="{{[{text: '取消'}, {text: '确定'}]}}">
+    <view class="index_dialog_title">联系客服</view>
+    <view>{{customerPhone}}</view>
+</indexDialog> -->
+<!-- 拨打电话 -->
+<showPhoneDialog phone="{{customerPhone}}" showCallPhone="{{hasPhone}}" bindmiddleChangePosition="positionevent" componentType="2"></showPhoneDialog>
+</view>

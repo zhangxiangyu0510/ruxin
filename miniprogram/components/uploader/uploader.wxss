@@ -1,0 +1,35 @@
+/* components/uploader/uploader.wxss */
+@import '/miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+.weui-uploader .weui-uploader__bd .pic{
+    border-radius: 16rpx;
+    background-color: #FAFAFA;
+}
+.weui-uploader__input-box:after{
+    width: 32rpx;
+    height: 3rpx;
+    background-color: #404040;
+}
+ .weui-uploader__input-box:before {
+    width: 3rpx;
+    height: 32rpx;
+    background-color: #404040;
+}
+.weui-uploader .weui-uploader__bd .pic{
+    float:left;
+    position:relative;
+    margin-right:16rpx;
+    margin-bottom:16rpx;
+    width: 160rpx;
+    height: 160rpx;
+}
+.weui-uploader .weui-uploader__bd .pic image{
+    border-radius: 16rpx;
+}
+.weui-uploader .weui-uploader__bd .pic .weui-uploader__img .delete-btn{
+    position: absolute;
+    top: 8rpx;
+    right: 8rpx;
+    width: 24rpx;
+    height: 24rpx;
+    z-index: 10;
+}

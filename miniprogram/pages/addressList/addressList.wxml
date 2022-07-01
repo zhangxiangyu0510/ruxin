@@ -1,0 +1,2 @@
+<!--pages/customer1/customer1.wxml-->
+<web-view src="{{webViewSrc}}" bindload="bindLoadHandler"></web-view>

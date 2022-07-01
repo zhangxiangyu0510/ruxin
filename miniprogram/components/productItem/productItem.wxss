@@ -1,0 +1,287 @@
+.productItem {
+  overflow: hidden;
+  width: calc(100% - 48rpx);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.productItem_item {
+  width: 340rpx;
+  background-color: white;
+  height: 544rpx;
+  /* float: left; */
+  margin-bottom: 22rpx;
+  border-radius: 16rpx;
+
+}
+
+/* .productItem_item:nth-child(odd) {
+  margin-right: 22rpx;
+} */
+
+.productItem_item_header {
+  width: 340rpx;
+  height: 340rpx;
+  /* background-color: #7340B3; */
+  border-top-left-radius: 16rpx;
+  border-top-right-radius: 16rpx;
+
+
+}
+
+.productItem_item_header image {
+  width: 340rpx;
+  height: 340rpx;
+  border-top-left-radius: 16rpx;
+  border-top-right-radius: 16rpx;
+
+}
+
+.productItem_item_body {
+  height: 204rpx;
+  width: calc(100% - 48rpx);
+  margin: 18rpx auto 0;
+
+}
+
+.productItem_text1 {
+
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24rpx;
+  line-height: 34rpx;
+  color: #333333;
+  text-align: left;
+  min-height: 66rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.productItem_box_left1 {
+  height: 32rpx;
+  margin-top: 16rpx;
+
+}
+
+.productItem_box_left1_text1 {
+  height: 32rpx;
+  /* width: 72rpx; */
+  text-align: center;
+  background-color: #7F7F7F;
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20rpx;
+  line-height: 32rpx;
+  border-radius: 4rpx;
+  float: left;
+  padding: 0 6rpx;
+
+  /* identical to box height, or 100% */
+
+  color: #FFFFFF;
+}
+
+.productItem_box_left1_text2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  float: left;
+  margin-left: 16rpx;
+  /* identical to box height */
+
+  /* 辅助文字 */
+  color: #888888;
+}
+
+.productItem_box_left2 {
+  height: 32rpx;
+  margin-top: 10rpx;
+
+}
+
+.productItem_box_left1_text3 {
+  height: 32rpx;
+  /* width: 72rpx; */
+  text-align: center;
+  /* background-color: #7340B3; */
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20rpx;
+  line-height: 32rpx;
+  border-radius: 4rpx;
+  float: left;
+  padding: 0 6rpx;
+
+  /* identical to box height, or 100% */
+
+  color: #FFFFFF;
+}
+
+.productItem_box_left1_text4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28rpx;
+  line-height: 32rpx;
+  float: left;
+  margin-left: 16rpx;
+  /* identical to box height */
+
+  /* 辅助文字 */
+  color: #440099;
+}
+
+.productItem_box_left {
+  float: left;
+}
+
+.productItem_box_right {
+  float: right;
+  width: 40rpx;
+  height: 40rpx;
+  /* background-color: #7340B3; */
+  padding: 14rpx;
+  margin-right: 10rpx;
+  margin-top: 34rpx;
+  position: relative;
+  left: 24rpx;
+}
+
+.HonourEnjoyCodeModel{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+
+}
+.HonourEnjoyCodeModel .modelBox{
+  position: absolute;
+  bottom: 0;
+  
+  border-radius: 30rpx;
+  background: linear-gradient(180deg, #ecfbff 0%, #fff 100%);
+  padding: 30rpx;
+  z-index: 2;
+  
+
+}
+.HonourEnjoyCodeModel .modelBox .title{
+  font-size: 32rpx;
+  color: #0e82ad;
+  text-align: center;
+  margin-bottom: 30rpx;
+  font-weight: 600;
+  margin-top: 20rpx;
+
+}
+.HonourEnjoyCodeModel .modelBox .text{
+  font-size: 28rpx;
+  color: #0e82ad;
+
+
+}
+.HonourEnjoyCodeModel .modelBox  .hilt{
+  text-align: center;
+  font-size: 24rpx;
+  font-weight: 300;
+  color: #a6a9b5;
+  margin-bottom: 60rpx;
+}
+.HonourEnjoyCodeModel .modelBox .button{
+  background: linear-gradient(90deg, #494396 0%, #38add4 100%);
+  border-radius: 50rpx;
+  padding: 24rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  margin-bottom: 40rpx;
+}
+.HonourEnjoyCodeModel .modelBox .selectBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx ;
+  border-radius: 16rpx;
+  border: 1px solid #5fdcff;
+  color: #4a4946;
+  font-size: 28rpx;
+  margin-top: 50rpx;
+  margin-bottom: 60rpx;
+background-color: #fff;
+  
+
+}
+.HonourEnjoyCodeModel .modelBox  .icon{
+  display: block;
+  width: 0;
+  height: 0;
+  border:16rpx solid transparent;
+  border-top-color:#d9d9d9;
+  position: relative;
+  top: 8rpx;
+}
+.HonourEnjoyCodeModel .modelBox  .name{
+  width: 590rpx;
+  height: auto;
+  word-wrap: break-word; /*强制换行*/
+  overflow: hidden; /*超出隐藏*/
+  text-overflow: ellipsis;/*隐藏后添加省略号*/
+  white-space: nowrap;/*强制不换行*/
+
+
+
+}
+.HonourEnjoyCodeModel .codeList{
+  border-radius: 30rpx;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  background-color: #fff;
+  box-sizing: border-box;
+
+}
+.HonourEnjoyCodeModel .codeList .listBox{
+  max-height: 450rpx;
+  overflow-y: scroll;
+}
+.HonourEnjoyCodeModel .codeList .listData{
+  width: 690rpx;
+  padding: 30rpx;
+  color: #333333;
+  font-size: 26rpx;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 10rpx solid #f5f5f5; 
+  word-wrap: break-word; /*强制换行*/
+  overflow: hidden; /*超出隐藏*/
+  text-overflow: ellipsis;/*隐藏后添加省略号*/
+  white-space: nowrap;/*强制不换行*/
+
+
+}
+.HonourEnjoyCodeModel .codeList .close{
+  width: 750rpx;
+  display: block;
+  text-align: center;
+  padding: 25rpx;
+  margin-bottom: 50rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  color: #333333;
+
+}

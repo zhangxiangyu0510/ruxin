@@ -1,0 +1,79 @@
+<view class="common_dialog_bg" wx:if="{{showAddInfoDialog || showGetBradge || showProtocol || showCallPhone || showNewUser&&isTrue}}">
+<!-- 完善信息 -->
+<cover-view class="addInfo_dialog" wx:if="{{showAddInfoDialog}}">
+  <cover-view class="addInfo_dialog_content_box_bg">
+    <cover-view class="addInfo_dialog_content_box">
+    <cover-view class="addInfo_dialog_con_logo">
+    <image src="{{shopKeeperInfo&&shopKeeperInfo.avatar}}"></image>
+    </cover-view>
+    <cover-view class="addInfo_dialog_con_text">{{shopKeeperInfo&&shopKeeperInfo.nickname}}</cover-view>
+    <cover-view class="addInfo_dialog_sub_text">请完善您的个人信息</cover-view>
+    <cover-view class="addInfo_dialog_sub_text">提升店主等级获取相关权益</cover-view>
+    <cover-view class="addInfo_dialog_btn" style="background: {{themeColor}};" bindtap="goUserInfo">完善信息</cover-view>
+    </cover-view>
+  </cover-view>
+  </cover-view>
+  <!-- 获得勋章奖励 -->
+  <cover-view class="getBradge_dialog" wx:if="{{showGetBradge}}">
+  <cover-view class="common_close_btn"></cover-view>
+  <cover-view class="getBradge_dialog_content_box_bg">
+    <cover-view class="getBradge_dialog_content_box">
+    <cover-view class="getBradge_dialog_con_logo">
+    </cover-view>
+    <cover-view class="getBradge_dialog_con_text">一见倾心</cover-view>
+    <cover-view class="getBradge_dialog_sub_text">恭喜获得新勋章一见倾心</cover-view>
+    <cover-view class="getBradge_dialog_btn">点击查看</cover-view>
+    </cover-view>
+  </cover-view>
+  </cover-view>
+  <!-- todo隐私协议 -->
+  <view class="protocol_dialog" wx:if="{{showProtocol}}">
+  <view class="protocol_dialog_content_box_bg">
+    <view class="protocol_dialog_content_box">
+    <view class="protocol_title">隐私协议</view>
+    <scroll-view scroll-y="true">
+    <view class="protocol_con">
+      <rich-text nodes="{{protocolCon}}">
+    </rich-text>
+    </view>
+  </scroll-view>
+    <view class="protocol_btn_box">
+      <navigator open-type="exit" target="miniProgram">
+        <button class="pro_btn1" hover-class>不同意并退出</button>
+      </navigator>
+    <button wx:if="{{disabled}}" class="pro_btn2" hover-class disabled="{{disabled}}" >同意并继续({{time}})</button>
+    <button wx:else class="spe_btn2" hover-class style="background:{{themeColor}}" bindtap="agree">同意并继续</button>
+    </view>
+    </view>
+  </view>
+  </view>
+   <!-- 客服电话 -->
+   <view class="phone_dialog" wx:if="{{showCallPhone}}">
+  <view class="phone_dialog_content_box_bg">
+    <view class="phone_dialog_content_box">
+    <view class="phone_dialog_title">联系官方客服</view>
+    <view class="phone_dialog_phone">
+      {{phone}}
+    </view>
+    <view class="phone_btn_box">
+        <button class="phone_btn1" hover-class bindtap="cancelPhone">取消</button>
+        <view class="phone_line"></view>
+        <button class="phone_btn2" hover-class style="color:{{themeColor}}" bindtap="callPhone">确定</button>
+    </view>
+    </view>
+  </view>
+  </view>
+  <!-- 首单八折 -->
+  <view class="newUserBox" wx:if="{{showNewUser&&isTrue}}">
+    <view class="newUser">
+        <view class="closeIconBox">
+            <mp-icon bindtap="closeShare" icon="close" color="#FFFFFF" size="{{25}}"></mp-icon>
+        </view>
+        <image bindtap="goLogin" src="{{newUserImg}}/myshop/imgs/newUser.png"class="share-image"></image>
+    </view>
+  </view>
+
+
+
+
+</view>

@@ -1,0 +1,24 @@
+<!--pages/customer/feedbackComplaintsList/feedbackComplaintsList.wxml-->
+<commonGlobal></commonGlobal>
+<view class="list">
+<view class="feedbackComplaintsList" wx:if="{{historyData.length}}">
+    <view class="historyList" wx:for="{{historyData}}" wx:key="index" bindtap="handleToDetail" data-item="{{item}}">
+        <view class="contentTop">
+            <view class="topTime">
+                <text>反馈时间：</text>
+                <text>{{item.feedBackTime}}</text>
+            </view>
+            <text style="color: {{themeColor}}">已提交</text>
+        </view>
+        <view class="contentText"><text>{{item.description}}</text></view>
+        <view class="img" >
+            <image wx:for="{{item.images}}" wx:for-item="imgUrl" wx:for-index="i" wx:key="i" src="{{imgUrl}}"></image>
+            <image wx:if="{{item.images.length>=3}}" class="goBeyond" src="../../images/userCenterIcon/goBeyond.svg"></image>
+        </view>
+    </view>
+</view>
+<NoData wx:if="{{!historyData.length&&isShowNotDataTitle}}"/>
+<view wx:if="{{historyData.length&&isShowNotDataTitle}}" class="notData">
+    已经到底了
+</view>
+</view>

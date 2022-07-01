@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "uploader":"../../../components/uploader/uploader",
+    "mp-actionSheet": "/miniprogram_npm/weui-miniprogram/actionsheet/actionsheet"
+  },
+  "navigationBarTitleText": "反馈与投诉"
+}

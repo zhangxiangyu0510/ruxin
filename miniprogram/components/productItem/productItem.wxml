@@ -1,0 +1,70 @@
+<view class="productItem">
+<!-- wx:if="{{ item.itemPrice && item.itemPrice.length!=0}}" -->
+  <view bindtap="goH5Detail" data-item="{{item}}" class="productItem_item"  wx:for="{{goodsListData}}" wx:key="index">
+    <!-- style="background-color: {{themeColor}};" -->
+    <view bindtap="changeGoodsItem" data-item="{{item}}" class="productItem_item_header">
+      <image src="{{item.itemImage || item.product.itemImage}}"></image>
+    </view>
+    <view class="productItem_item_body">
+
+      <view class="productItem_text1">
+        {{item.itemName || item.product.itemName}}
+      </view>
+
+      <view class="productItem_box">
+        <view wx:if="{{userLevel!=3}}" class="productItem_box_left">
+          <view class="productItem_box_left1">
+            <view style="background-color: {{themeColor}};" class="productItem_box_left1_text3">零售价</view>
+            <text style="color:{{themeColor}}" class="productItem_box_left1_text4">¥{{item.retailPrice || 0}}</text>
+          </view>
+          <view class="productItem_box_left2">
+
+            <view class="productItem_box_left1_text1">星级价</view>
+            <text class="productItem_box_left1_text2">¥{{ item.starPrice || 0}}</text>
+          </view>
+
+        </view>
+        <view wx:else class="productItem_box_left">
+          <view class="productItem_box_left1">
+
+            <view class="productItem_box_left1_text1">零售价</view>
+            <text class="productItem_box_left1_text2">¥{{item.retailPrice || 0}}</text>
+          </view>
+          <view class="productItem_box_left2">
+
+            <view style="background-color: {{themeColor}};" class="productItem_box_left1_text3">星级价</view>
+            <text style="color:{{themeColor}}" class="productItem_box_left1_text4">¥{{ item.starPrice || 0}}</text>
+          </view>
+
+        </view>
+        <image catchtap="cartGetStockQty" data-item="{{item}}" class="productItem_box_right" src="data:image/svg+xml,{{shoppingTrolleyIcon}}"></image>
+
+
+
+      </view>
+    </view>
+  </view>
+  <!-- 尊享代码 -->
+  <view wx:if="{{HonourEnjoyCodeModelShow}}" catchtap="closeEnjoyCode" class="HonourEnjoyCodeModel">
+    <view catchtap="modelBoxcahnge" class="modelBox">
+      <view class="title">尊享代码</view>
+      <view class="text">ageLOC Me新智我智芯已全线升级2.0，配方及肤感均有变化。请点击测评按钮，重新测评获取专属于您的肌肤护理专案。</view>
+      <view catchtap="selectCode" class="selectBox">
+        <view class="name">{{agelocmeItem.codeName}}
+        </view>
+        <view class="icon"></view>
+      </view>
+      <view class="hilt">可往星享城APP，进行需测试新代码测试
+      </view>
+      <view catchtap="EnjoyCodeConfirm" class="button">确定</view>
+
+    </view>
+
+    <view wx:if="{{codeListShow}}" class="codeList">
+      <view class="listBox">
+        <view wx:for="{{codeListData}}"  catchtap="selectList" data-item="{{item}}" class="listData">{{item.codeName}}</view>
+      </view>
+      <view class="close">取消</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "NoData":"../../../components/noData/index"
+  },
+  "navigationBarTitleText": "反馈与投诉"
+}

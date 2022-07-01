@@ -1,0 +1,43 @@
+<!--pages/shareInterim/shareInterim.wxml-->
+<view class="shareInterim">
+  <view class="imgbox">
+    <image src="/packageOne/images/icons/shareBgImage.svg" mode="widthFix"></image>
+  </view>
+  <view class="text">正在分享中，请您耐心等待...</view>
+  <!-- <button open-type="share"> 转发按钮</button> -->
+
+  <div wx:if="{{isShare}}">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+      <!-- <div class="weui-dialog__hd"><strong class="weui-dialog__title">弹窗标题</strong></div> -->
+      <div class="weui-dialog__bd">返回我的NU店</div>
+      <navigator open-type='exit' target='miniProgram'>
+        <div  class="weui-dialog__ft">
+          <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">确定</a>
+        </div>
+      </navigator>
+
+
+    </div>
+  </div>
+  <div class="shareModel" wx:if="{{!isShare}}">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+      <!-- <div class="weui-dialog__hd"><strong class="weui-dialog__title">弹窗标题</strong></div> -->
+      <div class="weui-dialog__bd">即将分享“如新NU店”小程序</div>
+      <div class="weui-dialog__ft">
+        <navigator class="cancel" open-type='exit' target='miniProgram'>
+          <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">取消</a>
+        </navigator>
+        <button class="share" open-type="share">
+          <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">分享</a>
+        </button>
+
+      </div>
+      <!-- <div class="weui-dialog__ft">
+        
+      </div> -->
+    </div>
+  </div>
+  <!-- <view class="but">111</view> -->
+</view>

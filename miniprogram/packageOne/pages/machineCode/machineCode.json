@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "commonToast":"../../../components/commonError/commonError"
+    },
+    "navigationBarTitleText": "绑定机器码"
+}

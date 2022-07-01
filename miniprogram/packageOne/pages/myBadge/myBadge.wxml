@@ -1,0 +1,33 @@
+<!--pages/ucenter/myBadge/myBadge.wxml-->
+<!-- <commonHeader titleText='我的'></commonHeader> -->
+<view class="badge">
+<view class="badge_header">
+    <view class="badge_header_avater">
+        <image src="{{shopInfo&&shopInfo.avatar||'data:image/svg+xml,'+my_header_avater}}"></image>
+    </view>
+    <view class="badge_header_infos">
+        <view class="badge_infos_name">
+            <text>{{shopInfo.nickname}}</text>
+            <view class="shopowenr_top_header_img">
+                <image src="{{levelImg}}"></image>
+            </view>
+        </view>
+        <view class="badge_infos_fans">
+        <!-- 和如新的<text class="badge_infos_day" style="color: {{themeColor}};">1440</text>天 -->
+            <view class="shopowenr_info2"><text>{{shopInfo.fansNum}}</text> 粉丝数</view>
+            <view class="shopowenr_info3"><text>{{shopInfo.shopAge}}</text> 年店主</view>
+        </view>
+    </view>
+</view>
+<view class="badge_single_box" wx:for="{{badgeData}}" wx:key="{{value.id}}" wx:for-item="value">
+    <view class="badge_single_box_title">{{value.name}}</view>
+    <view class="badge_single_box_items">
+    <view class="{{value.badges.length>=5?'badge_single_item_have_margin':'badge_single_item_no_margin'}}" wx:for="{{value.badges}}" wx:key="index" bindtap="goBadgeDetail" data-item="{{item}}">
+      <view class="badge_item_icon">
+        <image src="{{item.lighting&&item.imageAchieve}}"></image>
+      </view>
+      <view class="badge_item_text">{{item.lighting&&item.name||''}}</view>
+    </view>
+    </view>
+</view>
+</view>

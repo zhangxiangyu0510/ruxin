@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "commonHeader": "../../components/commonHeader/commonHeader",
+        "mp-tabs": "../../components/myTabs/index"
+    },
+    "navigationBarTitleText": "",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": false
+}
