@@ -1,0 +1,108 @@
+{
+    "entryPagePath": "pages/loadingPage/loadingPage",
+    "usingComponents": {
+        "dialogGlobal": "/components/dialogGlobal/dialogGlobal",
+        "commonGlobal": "/components/commonGlobal/commonGlobal"
+    },
+    "pages": [
+        "pages/loadingPage/loadingPage",
+        "pages/index/index",
+        "pages/enHome/index",
+        "pages/ucenter/index/index",
+        "pages/classify/classify",
+        "pages/buyCar/buyCar",
+        "pages/customer/search/search",
+        "pages/customer/searchResult/searchResult",
+        "pages/customerPage/index",
+        "pages/bannerDetail/bannerDetail",
+        "pages/addressList/addressList",
+        "pages/originalPage/index",
+        "pages/pageDetail/index",
+        "pages/payPage/index",
+        "pages/confirmOrder/index",
+        "pages/orderPage/index",
+        "pages/productList/index"
+    ],
+    "subpackages": [
+        {
+            "root": "packageOne/",
+            "name": "packageOne",
+            "pages": [
+                "pages/app-auth/index",
+                "pages/phoneLogin/index",
+                "pages/protocol/protocol",
+                "pages/evaluate/evaluate",
+                "pages/feedbackComplaintsDetail/feedbackComplaintsDetail",
+                "pages/feedbackComplaintsList/feedbackComplaintsList",
+                "pages/feedbackComplaints/feedbackComplaints",
+                "pages/shopOwneSet/shopOwneSet",
+                "pages/userInfo/userInfo",
+                "pages/productDetail/productDetail",
+                "pages/myBadge/myBadge",
+                "pages/badgeDetail/badgeDetail",
+                "pages/shareInterim/shareInterim",
+                "pages/termsManagement/index",
+                "pages/protocolDetails/index",
+                "pages/machineCode/machineCode",
+                "pages/noData/noData",
+                "pages/uploadAvatar/index"
+            ]
+        },
+        {
+          "root":"TUI-CustomerService",
+          "name": "TUI-CustomerService",
+          "pages": [
+             "pages/TUI-Conversation/conversation/conversation",
+             "pages/TUI-Chat/chat",
+             "pages/TUI-Conversation/create-conversation/create"
+          ],
+          "independent": false
+        }
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#7F7F7F",
+        "selectedColor": "#4a4a4a",
+        "borderStyle": "white",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "images/nav/index.png",
+                "selectedIconPath": "images/nav/index_selected.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/classify/classify",
+                "iconPath": "images/nav/classify.png",
+                "selectedIconPath": "images/nav/classify_selected.png",
+                "text": "分类"
+            },
+            {
+                "pagePath": "pages/buyCar/buyCar",
+                "iconPath": "images/nav/car.png",
+                "selectedIconPath": "images/nav/car_selected.png",
+                "text": "购物车"
+            },
+            {
+                "pagePath": "pages/ucenter/index/index",
+                "iconPath": "images/nav/mine.png",
+                "selectedIconPath": "images/nav/mine_selected.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "networkTimeout": {
+        "request": 100000,
+        "downloadFile": 100000,
+        "uploadFile": 100000,
+        "connectSocket": 100000
+    }
+}

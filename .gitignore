@@ -5,9 +5,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-miniprogram_npm
+# miniprogram_npm
 node_modules
-app.json
+# app.json
 .vscode
 .DS_Store
 
